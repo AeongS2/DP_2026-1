@@ -1,0 +1,30 @@
+package practice.ch01;
+
+import java.util.Iterator;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        //책장에 있는 책 출력
+
+        //방법1: 클라이언트가 책꽂이에 직접 접근하여 책을 꺼내오는 방법
+        for (int i = 0; i < bookShelf.getLength(); i++) {
+            system.out.println("Book: " + (i + 1) + ": " + bookShelf.getBookFrom(i).getName());
+        }
+
+        // 방법2: Iterator를 통해서 책꽂이의 책을 꺼내오는 방법
+        // Iterator를 얻어옴
+        Iterator<Book> it = bookShelf.iterator();
+        while (it.hasNext()) {
+            system.out.println("Book: " + it.next().getName());
+        }
+
+        //확장 for문을 이용한 방법
+        //이게 가능한 이유는 BookShelf가 Iterable 인터페이스를 구현했기 때문     
+        for (Book b: bookShelf) {   //형식: for (요소의 타입 변수명 : 컬렉션 객체) { ... }
+            System.out.println("Book: " + b.getName());
+        }
+    }
+}
