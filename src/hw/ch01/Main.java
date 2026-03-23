@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("학번: 20241369 이름: 이정민");
+        System.out.println("학번: 20241369 이름: 이정민"); //
 
         BookShelf bookShelf = new BookShelf(10);
         bookShelf.appendBook(new Book("클린코드", "기술", 2008, 30000));
@@ -23,7 +23,7 @@ public class Main {
 
         while (genreIt.hasNext()) {
             Book book = genreIt.next();
-            System.out.println(book.getName() + "\n");
+            System.out.println(book.getName());
         }
 
         System.out.println("\n[2-2]최신 책부터 오래된 책 순으로 순회");
