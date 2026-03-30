@@ -1,4 +1,4 @@
-package practice.ch03;
+package hw.ch03;
 
 public abstract class AbstractDisplay { //부모 클래스
     // open, print, close는 하위 클래스에 구현을 맡기는 추상 메소드 
@@ -6,11 +6,21 @@ public abstract class AbstractDisplay { //부모 클래스
     public abstract void print();
     public abstract void close();
 
+    int repeatCount; // 반복 횟수
+
+    public AbstractDisplay() {
+        this.repeatCount = 5;
+    }
+
+    public AbstractDisplay( int repeatCount) {
+        this.repeatCount = repeatCount;
+    }
+
     // display는 AbstractDisplay에서 구현하는 메소드 
     // 큰 틀(흐름,구조)을 제공함 => 템플릿 메소드 패턴
     public final void display() {   //final: 하위 클래스에서 오버라이드 불가(큰 흐름은 자식들이 바꿀 수 없다)
         open();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < this.repeatCount; i++) {
             print();
         }
         close();

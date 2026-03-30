@@ -1,10 +1,16 @@
-package practice.ch03;
+package hw.ch03;
 
 public class CharDisplay extends AbstractDisplay {
     private char ch; // 표시해야 하는 문자 
 
     // 생성자 
     public CharDisplay(char ch) {
+        super(); // 기본 5회
+        this.ch = ch;
+    }
+
+    public CharDisplay(char ch, int repeatCount) {
+        super(repeatCount);
         this.ch = ch;
     }
 

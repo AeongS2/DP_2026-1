@@ -1,16 +1,25 @@
-package practice.ch03;
+package hw.ch03;
 
 public class Main {
     public static void main(String[] args) {
-        //CharDisplay d1 = new CharDisplay('H');  //'H'(char), "H"(String)
-        AbstractDisplay d1 = new CharDisplay('H');  //부모 클래스 타입의 참조 변수로 자식 클래스의 인스턴스를 가리킴
-        d1.display();
-        d1.open();
+        // System.out.println("**[3-1] 기본 테스트 **");
+        // AbstractDisplay d1 = new CharDisplay('H');
+        // AbstractDisplay d2 = new StringDisplay("Hello");
 
-        //StringDisplay d2 = new StringDisplay("Hello, world.");
-        AbstractDisplay d2 = new StringDisplay("Hello, world.");    //부모 타입으로 만들면 더 좋다
+        // d1.display();
+        // d2.display();
+
+        System.out.println("**[3-2] Step 1 테스트: 반복 횟수 제어 **");
+        AbstractDisplay d1 = new CharDisplay('X', 3); // 3 회
+        AbstractDisplay d2 = new StringDisplay("Test", 7); // 7 회
+
+        d1.display();
         d2.display();
 
-        //AbstractDisplay d3 = new AbstractDusplay();
+        System.out.println("**[3-3] Step 2 테스트: 새로운 Display**");
+        // NumberDisplay
+        AbstractDisplay num = new NumberDisplay(42, 4);
+        num.display();
+
     }
 }
