@@ -4,6 +4,20 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ],
-    "java.jdt.ls.vmargs": "-Dfile.encoding=UTF-8"
+
+    
+    "java.jdt.ls.vmargs": "-Dfile.encoding=UTF-8",
+    //주석 색상
+    "editor.tokenColorCustomizations": {  
+        "comments": "#5ba765"
+    },
+    //커서 색상
+    "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#f53eb8",		    // 편집기   //"#40FF00":네온그린
+    "terminalCursor.foreground": "#f53eb8",		// 터미널
+    },
+    //"editor.cursorWidth": 3   // 커서 굵기
+
+
 
 }

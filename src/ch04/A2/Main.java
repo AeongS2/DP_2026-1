@@ -13,5 +13,8 @@ public class Main {
         card1.use();
         card2.use();
         card3.use();
+
+        String owner = ((IDCardFactory) factory).getDatabase().get(100);
+        System.out.println("100번 카드는 " + owner + "의 카드입니다.");
     }
 }
