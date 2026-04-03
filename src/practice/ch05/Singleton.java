@@ -4,7 +4,7 @@ package practice.ch05;
 // 싱글톤 패턴 적용하기
 public class Singleton {
 	// (3) Singleton 객체를 미리 하나 만들어 둠
-	private static Singleton singleton = new Singleton();
+	private static Singleton singleton = new Singleton();	// 클래스가 로딩될 때 Singleton 객체가 하나 만들어짐
 
 	// (1) 생성자를 private으로 함
 	private Singleton(){
