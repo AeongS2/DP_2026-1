@@ -1,11 +1,12 @@
 package practice.ch05.ex;
 
+// 다른 방법의 싱글턴 패턴
 public class Singleton {
     private static Singleton instance = new Singleton();
 
     private Singleton() {
         System.out.println("인스턴스가 생성되었습니다.");
-        slow();
+        slow(); // 인스턴스가 생성될 때 시간을 지연시킴
     }
 
     public static synchronized Singleton getInstance() {
