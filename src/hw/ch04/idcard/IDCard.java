@@ -8,7 +8,7 @@ public class IDCard extends Product {
     private String issuedDate;
 
     IDCard(String owner, int serial, String issuedDate) {
-        System.out.println(owner + "의 카드를 " + serial + "번으로 만듭니다.");
+        //System.out.println(owner + "의 카드를 " + serial + "번으로 만듭니다.");
         this.owner = owner;
         this.serial = serial;
         this.issuedDate = issuedDate;
@@ -21,7 +21,7 @@ public class IDCard extends Product {
 
     @Override
     public String toString() {
-        return "[IDCard:" + owner + "(" + serial + "/ "+ issuedDate +") ]";
+        return "[IDCard:" + owner + "(" + serial + ") - 발급날짜: "+ issuedDate +"]";
     }
 
     public String getOwner() {
