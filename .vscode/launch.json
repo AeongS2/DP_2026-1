@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "hw.ch05.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
             "name": "main",
             "request": "launch",
             "mainClass": "hw.ch04.main",
