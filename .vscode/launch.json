@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "hw.ch11.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "practice.ch12.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ch12.Sample.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "hw.ch10.Main",
             "projectName": "DP_2026-1_9c83c124"
         },
