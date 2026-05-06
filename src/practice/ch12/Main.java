@@ -10,5 +10,11 @@ public class Main {
 
         Display d3 = new SideBorder(d2, '*'); 
         d3.show();
+
+        Display d4 = new FullBorder(d1);
+        d4.show();
+
+        Display d5 = new SideBorder(d4, '/');
+        d5.show();
     }
 }

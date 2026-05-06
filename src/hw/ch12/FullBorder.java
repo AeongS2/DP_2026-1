@@ -1,4 +1,4 @@
-package practice.ch12;
+package hw.ch12;
 
 // 장식자2(문자열을 사각형으로 둘러싸는 장식자)
 public class FullBorder extends Border {
