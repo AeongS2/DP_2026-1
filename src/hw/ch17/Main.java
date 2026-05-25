@@ -2,6 +2,8 @@ package hw.ch17;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("20241369 이정민");
+
         NumberGenerator generator = new EvenNumberGenerator(0, 30);
 
         Observer observer1 = new DigitObserver();

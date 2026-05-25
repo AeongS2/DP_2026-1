@@ -6,6 +6,7 @@ public class RangeObserver implements Observer{
         System.out.print("RangeObserver: ");
         int num = generator.getNumber();
         String str = "";
+        
         if (num >= 0 && num < 10) {
             str = "Low";
         }else if(num >= 10 && num < 20){
