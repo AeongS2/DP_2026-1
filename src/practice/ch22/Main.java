@@ -1,24 +1,17 @@
-package ch22.A1;
+package practice.ch22;
 
-import ch22.A1.command.*;
-import ch22.A1.drawer.*;
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import practice.ch22.command.*;
+import practice.ch22.drawer.*;
 
 public class Main extends JFrame implements MouseMotionListener, WindowListener {
     // 그리기 이력 
     private MacroCommand history = new MacroCommand();
     // 그리는 영역 
     private DrawCanvas canvas = new DrawCanvas(400, 400, history);
-    // 삭제 버튼 
+    // 삭제 버튼
     private JButton clearButton  = new JButton("clear");
-    // 빨간 버튼 
-    private JButton redButton  = new JButton("red");
-    // 초록 버튼
-    private JButton greenButton  = new JButton("green");
-    // 파란 버튼
-    private JButton blueButton  = new JButton("blue");
 
     // 생성자 
     public Main(String title) {
@@ -26,44 +19,29 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
 
         this.addWindowListener(this);
         canvas.addMouseMotionListener(this);
+
         clearButton.addActionListener(e -> {
-            history.clear();
-            canvas.init();
-            canvas.repaint();
-        });
-        redButton.addActionListener(e -> {
-            Command cmd = new ColorCommand(canvas, Color.red);  // 색깔 명령 객체 생성
-            history.append(cmd);
-            cmd.execute();  // 색깔 명령 실행
-        });
-        greenButton.addActionListener(e -> {
-            Command cmd = new ColorCommand(canvas, Color.green);
-            history.append(cmd);
-            cmd.execute();
-        });
-        blueButton.addActionListener(e -> {
-            Command cmd = new ColorCommand(canvas, Color.blue);
-            history.append(cmd);
-            cmd.execute();
+            history.clear();    // 이력 전체 삭제
+            canvas.repaint();   // 캔버스 전체 다시 그리기 -> paint()가 호출됨 -> history.execute() -> 이력이 없으니까 아무것도 안그려짐
         });
 
         Box buttonBox = new Box(BoxLayout.X_AXIS);
         buttonBox.add(clearButton);
-        buttonBox.add(redButton);
-        buttonBox.add(greenButton);
-        buttonBox.add(blueButton);
+
         Box mainBox = new Box(BoxLayout.Y_AXIS);
         mainBox.add(buttonBox);
         mainBox.add(canvas);
         getContentPane().add(mainBox);
 
-        pack();
-        setVisible(true);
+        pack(); // 정리하고
+        setVisible(true);   // 화면에 보여줌
     }
 
     // MouseMotionListener용
     @Override
-    public void mouseMoved(MouseEvent e) {}
+    public void mouseMoved(MouseEvent e) {
+        System.out.println("mouseMoved: " + e.getPoint());
+    }
 
     @Override
     public void mouseDragged(MouseEvent e) {
@@ -72,7 +50,7 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
         cmd.execute();
     }
 
-    // WindowListener용
+    // WindowListener용 
     @Override
     public void windowClosing(WindowEvent e) {
         System.exit(0);

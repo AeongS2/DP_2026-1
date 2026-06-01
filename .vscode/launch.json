@@ -8,6 +8,41 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "ch22.A3.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "practice.ch22.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ch22.A1.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ch22.Sample.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "practice.ch20.Main",
+            "projectName": "DP_2026-1_9c83c124"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "hw.ch19.Main",
             "projectName": "DP_2026-1_9c83c124"
         },

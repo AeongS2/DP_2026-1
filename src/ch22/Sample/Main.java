@@ -2,8 +2,6 @@ package ch22.Sample;
 
 import ch22.Sample.command.*;
 import ch22.Sample.drawer.*;
-
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -38,21 +36,23 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
     }
 
     // MouseMotionListener용
+    // 2개 구현해줘야 함
     @Override
     public void mouseMoved(MouseEvent e) {
     }
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        Command cmd = new DrawCommand(canvas, e.getPoint());
-        history.append(cmd);
-        cmd.execute();
+        Command cmd = new DrawCommand(canvas, e.getPoint());    // 그리기 명령 객체가 생성됨
+        history.append(cmd);    // 그리기 명령이 이력에 추가됨
+        cmd.execute();  // 그리기 명령을 실행함
     }
 
     // WindowListener용 
+    // 7개 구현해줘야하는데 그 중 1개만 구현
     @Override
     public void windowClosing(WindowEvent e) {
-        System.exit(0);
+        System.exit(0); // 이 줄 없으면 윈도우 x 눌러도 프로그램이 종료되지 않음
     }
 
     @Override public void windowActivated(WindowEvent e) {}
